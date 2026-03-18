@@ -47,12 +47,26 @@
       <section class="col-lg-6">
         <div class="p-4 bg-white rounded-4 shadow-sm">
           <h2 class="display-6 fw-bold text-primary mb-3">Contacto</h2>
-          <p class="lead text-secondary mb-3">Aquí más adelante irá el formulario (Task 6). Por ahora,
-            deja este mensaje de ejemplo mientras conectan el flujo real de pedidos.</p>
+          <p class="lead text-secondary mb-3">Envíanos tu mensaje y te contactamos (demo).</p>
 
-          <div class="alert alert-warning mb-0" role="alert">
-            Siguiente paso: agregar el formulario con email + mensaje y mostrar un alert con botón de cerrar.
+          <div id="messageSentAlert" class="alert alert-success alert-dismissible fade show d-none" role="alert">
+            <strong>Message sent</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
           </div>
+
+          <form id="contactForm" class="mt-3">
+            <div class="mb-3">
+              <label for="contactEmail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="contactEmail" name="email" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="contactMessage" class="form-label">Message</label>
+              <textarea class="form-control" id="contactMessage" name="message" rows="4" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send</button>
+          </form>
         </div>
       </section>
 
