@@ -1,5 +1,33 @@
+:root {
+  /* Team palette (Task 2): map colors into Bootstrap variables */
+  --c-edede9: #edede9;
+  --c-d6ccc2: #d6ccc2;
+  --c-f5ebe0: #f5ebe0;
+  --c-e3d5ca: #e3d5ca;
+  --c-d5bdaf: #d5bdaf;
+
+  /* Override Bootstrap theme variables so Bootstrap utility classes use this palette */
+  --bs-body-bg: var(--c-edede9);
+  --bs-body-bg-rgb: 237, 237, 233;
+
+  --bs-primary: var(--c-d5bdaf);
+  --bs-primary-rgb: 213, 189, 175;
+
+  --bs-secondary: var(--c-d6ccc2);
+  --bs-secondary-rgb: 214, 204, 194;
+
+  --bs-success: var(--c-e3d5ca);
+  --bs-success-rgb: 227, 213, 202;
+
+  --bs-warning: var(--c-f5ebe0);
+  --bs-warning-rgb: 245, 235, 224;
+}
+
 html {
-    height: 100%;
-    width: 100%;
-  }
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
   

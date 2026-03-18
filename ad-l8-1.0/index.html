@@ -1,25 +1,120 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Playeras Luddies</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link href="style.css" rel="stylesheet" type="text/css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
-<body>
-  Hello world
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-  <script src="script.js"></script>
+<body class="bg-body">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container">
+        <a class="navbar-brand fw-semibold" href="index.html">Playeras Luddies</a>
 
-  <!--
-  This script places a badge on your repl's full-browser view back to your repl's cover
-  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
-  teal, blue, blurple, magenta, pink!
-  -->
-  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container py-4">
+    <div class="row g-4">
+      <aside class="col-lg-3" aria-label="Advertisements area">
+        <!-- Empty on purpose: reserved for future advertisers -->
+      </aside>
+
+      <section class="col-lg-6">
+        <div class="p-4 bg-white rounded-4 shadow-sm">
+          <h1 class="display-6 fw-bold text-primary mb-3">Tienda de Playeras</h1>
+          <p class="lead text-secondary mb-3">Diseños con estilo, calidad y comodidad. Aquí tienes contenido
+            de muestra para que el layout se vea bien mientras armas tus playeras reales.</p>
+
+          <img class="img-fluid rounded-3 shadow-sm"
+            src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27450%27%3E%3Crect%20width%3D%27900%27%20height%3D%27450%27%20fill%3D%27%23edede9%27/%3E%3Crect%20x%3D%2750%27%20y%3D%2775%27%20width%3D%27800%27%20height%3D%27300%27%20rx%3D%2730%27%20fill%3D%27%23d5bdaf%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%27%20font-size%3D%2744%27%20fill%3D%27%23333333%27%3EPlayeras%20Luddies%3C/text%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2764%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%27%20font-size%3D%2720%27%20fill%3D%27%23333333%27%3EImagen%20de%20ejemplo%3C/text%3E%3C/svg%3E"
+            alt="Playeras Luddies (imagen de ejemplo)">
+
+          <div class="row g-3 mt-1">
+            <div class="col-md-4">
+              <div class="card border-0 shadow-sm h-100">
+                <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27600%27%20height%3D%27420%27%3E%3Crect%20width%3D%27600%27%20height%3D%27420%27%20fill%3D%27%23d6ccc2%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%27%20font-size%3D%2740%27%20fill%3D%27%23333333%27%3EPlayera%3C/text%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2760%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%27%20font-size%3D%2720%27%20fill%3D%27%23333333%27%3ECl%C3%A1sica%3C/text%3E%3C/svg%3E"
+                  class="card-img-top"
+                  alt="Playera 1 (placeholder)">
+                <div class="card-body">
+                  <h5 class="card-title text-primary fw-semibold mb-1">Playera Clásica</h5>
+                  <p class="card-text text-secondary mb-0">Suave y lista para usar todos los días.</p>
+                  <div class="fw-bold mt-2 text-success">$19.99</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card border-0 shadow-sm h-100">
+                <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27600%27%20height%3D%27420%27%3E%3Crect%20width%3D%27600%27%20height%3D%27420%27%20fill%3D%27%23f5ebe0%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%27%20font-size%3D%2740%27%20fill%3D%27%23333333%27%3EUrbana%3C/text%3E%3C/svg%3E"
+                  class="card-img-top"
+                  alt="Playera 2 (placeholder)">
+                <div class="card-body">
+                  <h5 class="card-title text-primary fw-semibold mb-1">Edición Urbana</h5>
+                  <p class="card-text text-secondary mb-0">Un toque moderno para tu outfit.</p>
+                  <div class="fw-bold mt-2 text-success">$24.99</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card border-0 shadow-sm h-100">
+                <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27600%27%20height%3D%27420%27%3E%3Crect%20width%3D%27600%27%20height%3D%27420%27%20fill%3D%27%23e3d5ca%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%27%20font-size%3D%2740%27%20fill%3D%27%23333333%27%3EPersonalizada%3C/text%3E%3C/svg%3E"
+                  class="card-img-top"
+                  alt="Playera 3 (placeholder)">
+                <div class="card-body">
+                  <h5 class="card-title text-primary fw-semibold mb-1">Personalizada</h5>
+                  <p class="card-text text-secondary mb-0">Tu diseño, tu estilo (placeholder).</p>
+                  <div class="fw-bold mt-2 text-success">$29.99</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="alert alert-warning mt-3 mb-0" role="alert">
+            Promoción: 10% de descuento en diseños seleccionados (contenido de ejemplo).
+          </div>
+        </div>
+      </section>
+
+      <aside class="col-lg-3" aria-label="News area">
+        <!-- Empty on purpose: reserved for future news articles -->
+      </aside>
+    </div>
+  </main>
+
+  <footer class="mt-5 bg-secondary text-dark">
+    <div class="container py-4">
+      <div class="fw-semibold text-center">Teammate 1 • Teammate 2 • Teammate 3</div>
+      <div class="small text-center">ventas@luddies-playeras.example</div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
