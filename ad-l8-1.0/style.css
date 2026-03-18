@@ -3,3 +3,46 @@ html {
     width: 100%;
   }
   
+:root {
+  --color-1: #EEEEEC;
+  --color-2: #C9BFB4;
+  --color-3: #F0E8DA;
+  --color-4: #D4C9BC;
+  --color-5: #C4A596;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-3);
+}
+
+#navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+#body-wrapper {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+}
+
+#header  { background: var(--color-2); }
+#navbar  { background: var(--color-1); }
+#col-ad  { background: var(--color-4); }
+#col-news { background: var(--color-4); }
+#footer  { background: var(--color-5); }
+
+@media (max-width: 600px) {
+  #body-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+.carousel-item img{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
