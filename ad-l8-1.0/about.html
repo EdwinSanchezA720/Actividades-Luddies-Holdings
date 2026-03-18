@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Us - Luddies Holdings</title>
+  
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background: var(--color-2);">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="index.html">Luddies Holdings</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header id="header" class="text-center py-5" style="background: var(--color-2);">
+    <h1 class="display-4 fw-bold">About Us</h1>
+    <p class="lead text-muted">Our story, our team, our mission</p>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow-1 py-5">
+    <div class="container">
+      
+      <!-- Introduction -->
+      <section class="mb-5">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <p class="lead">
+              We are a passionate team dedicated to T-shirt design and e-commerce solutions. 
+              This project was created with the idea of offering comfortable, modern, and affordable 
+              T-shirts for everyone.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Mission -->
+      <section class="mb-5">
+        <h2 class="fw-bold mb-4">Our Mission</h2>
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <p>
+              Our mission is to offer high-quality T-shirts with unique designs that reflect style and personality. 
+              We believe that every customer deserves premium products at accessible prices.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Team -->
+      <section class="mb-5">
+        <h2 class="fw-bold mb-4">Our Team</h2>
+        <p class="text-center mb-4">
+          Our team is made up of designers and developers who work together to create a unique T-shirt shopping experience.
+        </p>
+        
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card shadow-sm h-100 product-card">
+              <img src="pictures/img1.jpg" class="card-img-top" alt="Frontend Developer" style="height: 250px; object-fit: cover;">
+              <div class="card-body">
+                <h5 class="card-title">Frontend Developer</h5>
+                <p class="card-text text-muted">Specializing in responsive and modern web interfaces</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card shadow-sm h-100 product-card">
+              <img src="pictures/img2.jpg" class="card-img-top" alt="Design Team" style="height: 250px; object-fit: cover;">
+              <div class="card-body">
+                <h5 class="card-title">Design Team</h5>
+                <p class="card-text text-muted">Passionate about creating unique and trendy T-shirt designs</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card shadow-sm h-100 product-card">
+              <img src="pictures/img3.jpg" class="card-img-top" alt="Backend Developer" style="height: 250px; object-fit: cover;">
+              <div class="card-body">
+                <h5 class="card-title">Backend Developer</h5>
+                <p class="card-text text-muted">Building robust and scalable server solutions</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Our Project -->
+      <section class="bg-light p-5 rounded">
+        <h2 class="fw-bold mb-4">About Our Project</h2>
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <p>
+              This website was created as part of our web development learning journey, combining modern design 
+              principles with functionality using Bootstrap 5. We focused on creating an intuitive user experience 
+              while maintaining beautiful aesthetics and responsive design.
+            </p>
+            <p>
+              Our approach includes:
+            </p>
+            <ul class="list-unstyled">
+              <li><strong>✓ Responsive Design:</strong> Works seamlessly on all devices</li>
+              <li><strong>✓ Modern Bootstrap:</strong> Built with Bootstrap 5 for consistency</li>
+              <li><strong>✓ User-Friendly Navigation:</strong> Easy-to-use interface</li>
+              <li><strong>✓ Quality Products:</strong> Premium T-shirts at great prices</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="mt-auto py-4 text-center" style="background: var(--color-5); color: white;">
+    <div class="container">
+      <p class="mb-0">&copy; 2026 Luddies Holdings. All rights reserved.</p>
+      <p class="small">Premium T-shirts for everyone</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
