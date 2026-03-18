@@ -1,5 +1,28 @@
-html {
-    height: 100%;
-    width: 100%;
-  }
-  
+ body {
+    background: #EDEDE9;
+}
+
+.navbar {
+    background: #C9B6A6;
+}
+
+.contact-card {
+    background: #D6CCC2;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.btn-custom {
+    background: #B7A093;
+    color: white;
+}
+
+.btn-custom:hover {
+    background: #8C7B75;
+    color: white;
+}
+
+footer {
+    background: #8C7B75;
+    color: white;
+}
