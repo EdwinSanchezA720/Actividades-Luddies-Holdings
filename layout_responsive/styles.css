@@ -1,0 +1,85 @@
+/* Variables de color por zona (fácil de ajustar y documentar) */
+:root {
+  --color-header: #1e3a5f;
+  --color-aside: #2d6a4f;
+  --color-main: #bc6c25;
+  --color-footer: #6c4a7c;
+  --color-text-on-dark: #f8f9fa;
+  --breakpoint: 768px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+}
+
+.page {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas:
+    "header"
+    "aside"
+    "main"
+    "footer";
+}
+
+.site-header {
+  grid-area: header;
+  background: var(--color-header);
+  color: var(--color-text-on-dark);
+  padding: 1rem 1.25rem;
+}
+
+.site-aside {
+  grid-area: aside;
+  background: var(--color-aside);
+  color: var(--color-text-on-dark);
+  padding: 1rem 1.25rem;
+}
+
+.site-main {
+  grid-area: main;
+  background: var(--color-main);
+  color: var(--color-text-on-dark);
+  padding: 1rem 1.25rem;
+  min-height: 8rem;
+}
+
+.site-footer {
+  grid-area: footer;
+  background: var(--color-footer);
+  color: var(--color-text-on-dark);
+  padding: 1rem 1.25rem;
+}
+
+.site-brand {
+  margin: 0 0 0.25rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.section-label {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .page {
+    grid-template-columns: minmax(200px, 260px) 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "header header"
+      "aside main"
+      "footer footer";
+  }
+}
