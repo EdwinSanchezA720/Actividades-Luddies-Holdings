@@ -1,4 +1,10 @@
-/* Variables de color por zona (fácil de ajustar y documentar) */
+/* --------------------------------------------------------------------------
+   Variables globales (:root)
+   Aquí centralizamos colores y el ancho de corte del diseño. Si cambias un
+   color, se actualiza toda la sección que usa var(--nombre).
+   --breakpoint: un solo lugar para el ancho de corte; la media query de
+   abajo usa min-width: var(--breakpoint) para mantenerlo sincronizado.
+   -------------------------------------------------------------------------- */
 :root {
   --color-header: #1e3a5f;
   --color-aside: #2d6a4f;
@@ -8,18 +14,35 @@
   --breakpoint: 768px;
 }
 
+/* --------------------------------------------------------------------------
+   Reset mínimo
+   border-box: el padding y el borde cuentan dentro del ancho/alto declarado,
+   evita desbordes inesperados al usar porcentajes o grid/flex.
+   -------------------------------------------------------------------------- */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+/* Tipografía base y sin margen exterior en body (el grid de .page ocupa todo) */
 body {
   margin: 0;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   line-height: 1.5;
 }
 
+/* --------------------------------------------------------------------------
+   Contenedor principal: CSS Grid + áreas con nombre
+   - display: grid activa el modo rejilla.
+   - min-height: 100vh: la página ocupa al menos toda la altura de la ventana;
+     así el footer queda abajo aunque haya poco contenido en main.
+   - grid-template-columns: 1fr → una sola columna (móvil primero).
+   - grid-template-rows: auto = altura según contenido; 1fr en "main" hace
+     que la zona central crezca y empuje el footer hacia abajo.
+   - grid-template-areas: mapa en texto; cada fila entre comillas es una fila
+     de la rejilla. Orden vertical: cabecera, barra lateral, contenido, pie.
+   -------------------------------------------------------------------------- */
 .page {
   display: grid;
   min-height: 100vh;
@@ -32,6 +55,7 @@ body {
     "footer";
 }
 
+/* grid-area debe coincidir con un nombre usado en grid-template-areas arriba */
 .site-header {
   grid-area: header;
   background: var(--color-header);
@@ -51,6 +75,7 @@ body {
   background: var(--color-main);
   color: var(--color-text-on-dark);
   padding: 1rem 1.25rem;
+  /* Altura mínima solo para que se vea bien el bloque con poco texto */
   min-height: 8rem;
 }
 
@@ -61,19 +86,29 @@ body {
   padding: 1rem 1.25rem;
 }
 
+/* Marca en el header (Luddies Holdings), separada del título "Header" */
 .site-brand {
   margin: 0 0 0.25rem;
   font-weight: 600;
   letter-spacing: 0.02em;
 }
 
+/* Título visible de cada sección (Header, Aside, Main, Footer) */
 .section-label {
   margin: 0;
   font-size: 1.35rem;
   font-weight: 700;
 }
 
-@media (min-width: 768px) {
+/* --------------------------------------------------------------------------
+   Escritorio / tablet ancha (min-width: var(--breakpoint))
+   Solo cuando la ventana es lo bastante ancha:
+   - Dos columnas: aside con ancho fijo entre 200px y 260px, main el resto (1fr).
+   - Tres filas: header, fila central (aside + main), footer.
+   - grid-template-areas: repetir "header header" hace que esa fila ocupe
+     las dos columnas; igual para footer. La fila del medio reparte aside | main.
+   -------------------------------------------------------------------------- */
+@media (min-width: var(--breakpoint)) {
   .page {
     grid-template-columns: minmax(200px, 260px) 1fr;
     grid-template-rows: auto 1fr auto;
